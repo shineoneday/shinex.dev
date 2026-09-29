@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects - Shinex</title>
+<meta name="description" content="Projects by Shinex: work under NDA and pet projects.">
+<meta name="theme-color" content="#FFFDF8">
+<link rel="canonical" href="https://shinex.dev/projects/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shinex">
+<meta property="og:title" content="Projects - Shinex">
+<meta property="og:description" content="Work under NDA and pet projects.">
+<meta property="og:url" content="https://shinex.dev/projects/">
+<meta property="og:image" content="https://shinex.dev/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jetbrains-mono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="brand" href="/" aria-label="Shinex, home page"><span class="logo" aria-hidden="true"><b>&lt;</b>shinex<b>/&gt;</b></span></a>
+  <nav class="pills" aria-label="Main">
+    <a class="pill" href="/projects/" aria-current="page">Projects</a>
+    <a class="pill" href="/contacts/">Contacts</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="page-head">
+      <h1 class="reveal">Projects</h1>
+      <p class="reveal" style="--i:1">Work under NDA first, then what I build for myself.</p>
+    </div>
+
+    <section class="group" id="nda" aria-labelledby="nda-title">
+      <h2 id="nda-title" class="reveal"><span>Under NDA</span></h2>
+      <p class="group-note reveal" style="--i:1">Shown without screenshots or the client's name.</p>
+      <div class="cards">
+        <article class="card card-plain card-wide reveal">
+          <div class="card-body">
+            <h3>CRM system for a financial company</h3>
+            <p>Counterparties, contracts, registries and finance in one system. Every release goes to test servers first, and a production deploy starts with a database backup.</p>
+            <dl class="facts">
+              <div><dt>Role</dt><dd>Backend, frontend, infrastructure</dd></div>
+              <div><dt>Stack</dt><dd>Python, Flask, PostgreSQL, SQLAlchemy, Docker</dd></div>
+              <div><dt>Delivery</dt><dd>CI/CD on GitHub Actions, test and production servers</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="group" id="pets" aria-labelledby="pets-title">
+      <h2 id="pets-title" class="reveal"><span>Pet projects</span></h2>
+      <div class="cards">
+        <article class="card card-plain card-wide reveal">
+          <div class="card-body">
+            <h3>CS2 Voice Matcher</h3>
+            <p>Speaker recognition for game demo recordings. It extracts voice tracks, builds voice embeddings with a WeSpeaker ResNet34 model (MFCC as a fallback) and compares them with <code>CosineSimilarity</code>.</p>
+            <ul class="tags"><li>C#</li><li>.NET 9</li><li>ONNX Runtime</li><li>SQLite</li></ul>
+          </div>
+        </article>
+        <article class="card card-plain reveal">
+          <div class="card-body">
+            <h3>Exam Prep Platform</h3>
+            <p>A closed platform that prepares students for a certification exam, with an AI tutor and automated grading.</p>
+            <ul class="tags"><li>FastAPI</li><li>SQLite</li><li>Jinja2</li></ul>
+          </div>
+        </article>
+        <article class="card card-plain reveal" style="--i:1">
+          <div class="card-body">
+            <h3>AI News Bot</h3>
+            <p>Runs on its own: collects local news, rewrites it in a character's voice, adds an image and publishes.</p>
+            <ul class="tags"><li>Python</li><li>LLM APIs</li><li>Flask</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="cta">
+  <div class="cta-in">
+    <h2>Let's build something.</h2>
+    <a class="cta-btn" href="/contacts/">Contact me</a>
+    <p class="cta-links">
+      <a href="https://t.me/shinex" rel="noopener">Telegram</a>
+      <i aria-hidden="true">|</i>
+      <a href="/contacts/" data-u="cshykamax" data-h="icloud.com">Email</a>
+    </p>
+  </div>
+  <div class="cta-bar">
+    <a class="cta-logo" href="/" aria-label="Shinex, home page"><span class="logo" aria-hidden="true"><b>&lt;</b>shinex<b>/&gt;</b></span></a>
+    <p>&copy; 2026 Shinex</p>
+  </div>
+  <div class="blob" aria-hidden="true"></div>
+</footer>
+
+</body>
+</html>
