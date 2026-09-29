@@ -178,6 +178,8 @@ a:hover > .logo b:last-child { transform: translateX(0.2em); }
 .dude .thin { stroke-width: 6; }
 .dude .strand { stroke: var(--bg); }
 .dude .spark { fill: var(--accent); }
+.dude .limb { fill: none; stroke-width: 42; }
+.dude .skin { fill: none; stroke: var(--bg); stroke-width: 24; }
 
 .scroll-hint {
   position: absolute;
@@ -210,7 +212,8 @@ a:hover > .logo b:last-child { transform: translateX(0.2em); }
   .js .scroll-hint { opacity: 0; animation: show 0.01s linear 6s forwards; }
   .js .is-typed .scroll-hint { animation: fade 0.7s var(--ease) 1s both; }
 
-  .dude .arm { transform-origin: 304px 418px; animation: wave-arm 1.6s ease-in-out infinite; }
+  /* the forearm turns around the elbow; both .arm layers share this animation and stay in step */
+  .dude .arm { transform-origin: 337px 384px; animation: wave-arm 1.6s ease-in-out infinite; }
   .dude .eye { transform-box: fill-box; transform-origin: center; animation: blink 5s infinite; }
   .dude .spark { transform-box: fill-box; transform-origin: center; animation: twinkle 2.4s ease-in-out infinite; }
   .dude .spark + .spark { animation-delay: -1.2s; }
@@ -219,7 +222,7 @@ a:hover > .logo b:last-child { transform: translateX(0.2em); }
 @keyframes show { to { opacity: 1; transform: none; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes rise { from { opacity: 0; transform: translateY(7rem); } to { opacity: 1; transform: none; } }
-@keyframes wave-arm { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(7deg); } }
+@keyframes wave-arm { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(9deg); } }
 @keyframes blink { 0%, 46%, 50%, 100% { transform: scaleY(1); } 48% { transform: scaleY(0.1); } }
 @keyframes twinkle { 0%, 100% { transform: scale(1) rotate(0); } 50% { transform: scale(0.55) rotate(20deg); } }
 @keyframes wave { 50% { transform: translateY(-0.33rem); } }
