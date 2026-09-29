@@ -298,18 +298,19 @@ a:hover > .logo b:last-child { transform: translateX(0.2em); }
 
 code { font: inherit; padding: 0.05em 0.4em; border-radius: 6px; background: var(--accent); color: var(--ink); }
 
+/* contacts: three equal tiles in a row, icon on top; on narrow screens a list with the icon on the left */
 .channels {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.25rem, 2.5vw, 1.9rem);
   padding: 0 0.6rem clamp(4rem, 9vw, 7rem) 0;
 }
 .channel {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: 1.1rem;
-  padding: clamp(1.2rem, 2.5vw, 1.8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: clamp(1.3rem, 2.2vw, 1.8rem);
   border: var(--line) solid var(--ink);
   border-radius: var(--radius);
   background: var(--surface);
@@ -317,14 +318,18 @@ code { font: inherit; padding: 0.05em 0.4em; border-radius: 6px; background: var
   transition: transform 0.4s var(--bouncy), box-shadow 0.4s var(--bouncy);
 }
 .channel:hover { transform: translate(-3px, -3px); box-shadow: 0.6rem 0.6rem 0 var(--accent); }
-.channel-wide { grid-column: 1 / -1; }
-.channel-icon { display: grid; place-items: center; width: 3.4rem; height: 3.4rem; border: var(--line) solid var(--ink); border-radius: 50%; background: var(--accent); }
+.channel-icon { display: grid; place-items: center; flex: none; width: 3.4rem; height: 3.4rem; border: var(--line) solid var(--ink); border-radius: 50%; background: var(--accent); transition: transform 0.4s var(--bouncy); }
+.channel:hover .channel-icon { transform: rotate(-8deg) scale(1.06); }
 .channel-icon svg { width: 1.6rem; height: 1.6rem; fill: currentColor; }
 .channel-name { display: block; color: var(--muted); font-size: 0.85rem; }
-.channel-value { display: block; font: 800 clamp(1.15rem, 2.4vw, 1.7rem)/1.25 var(--display); overflow-wrap: anywhere; }
+.channel-value { display: block; margin-top: 0.15rem; font: 800 clamp(1.1rem, 1.55vw, 1.3rem)/1.25 var(--display); overflow-wrap: anywhere; }
 
+@media (max-width: 56rem) {
+  .channels { grid-template-columns: 1fr; }
+  .channel { flex-direction: row; align-items: center; gap: 1.1rem; }
+}
 @media (max-width: 52rem) {
-  .cards, .channels { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
 }
 
