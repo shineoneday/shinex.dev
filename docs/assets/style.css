@@ -328,6 +328,13 @@ code { font: inherit; padding: 0.05em 0.4em; border-radius: 6px; background: var
   .channels { grid-template-columns: 1fr; }
   .channel { flex-direction: row; align-items: center; gap: 1.1rem; }
 }
+/* very narrow phones: keep the email address on one line */
+@media (max-width: 22.5rem) {
+  .channel { gap: 0.8rem; }
+  .channel-icon { width: 2.8rem; height: 2.8rem; }
+  .channel-icon svg { width: 1.3rem; height: 1.3rem; }
+  .channel-value { font-size: 0.9rem; }
+}
 @media (max-width: 52rem) {
   .cards { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
